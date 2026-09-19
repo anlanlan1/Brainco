@@ -1,20 +1,32 @@
 {
-    "name": "Brainco",
-    "version": "0.1.0",
-    "description": "Brainco 脑控模块扩展，支持自定义注意力阈值",
-    "license": "MIT",
+    "name": "brainco",
+    "version": "0.0.10",
+    "description": "",
     "dependencies": {
         "core": "*",
-        "serial": "*"
+        "radio": "*",
+        "microphone": "*"
     },
     "files": [
+        "main.blocks",
         "main.ts",
-        "README.md"
+        "README.md",
+        "_locales/zh-CN/brainco-jsdoc-strings.json",
+        "_locales/zh-CN/brainco-strings.json"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "microbit": "2.0.0"
-    }
+        "branch": "v4.0.16",
+        "tag": "v4.0.16",
+        "commits": "https://github.com/microsoft/pxt-microbit/commits/04b1a5492fb75af626caed5601ee8d794d970dd7",
+        "target": "4.0.18",
+        "pxt": "7.0.12",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
 }
