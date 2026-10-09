@@ -5,9 +5,9 @@ namespace Brainco {
      * 比较运算符枚举（下拉菜单）
      */
     export enum CompareOperator {
-        //% block=">"
+        //% block="≥"
         Greater = 1,
-        //% block="<"
+        //% block="≤"
         Less = 2,
         //% block="="
         Equal = 3
@@ -25,7 +25,7 @@ namespace Brainco {
 
     /**
      * 判断专注力是否符合条件（菱形/布尔积木）
-     * 例如：专注力 > 50，专注力 < 30，专注力 = 80
+     * 例如：专注力 ≥ 50，专注力 ≤ 30，专注力 = 80
      */
     //% block="专注力 %op %threshold" blockId="CompareAttention"
     //% threshold.min=0 threshold.max=100 threshold.defl=50
@@ -35,9 +35,9 @@ namespace Brainco {
         
         switch (op) {
             case CompareOperator.Greater:
-                return value > threshold
+                return value >= threshold // 改为大于等于
             case CompareOperator.Less:
-                return value < threshold
+                return value <= threshold // 改为小于等于
             case CompareOperator.Equal:
                 return value == threshold
             default:
